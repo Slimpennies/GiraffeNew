@@ -19,9 +19,10 @@ import {
   tokenContractAddress,
 } from "../consts/contractAddresses";
 import styles from "../styles/Home.module.css";
-import { idText } from "typescript";
+import { __String, idText, StringLiteral } from "typescript";
 import { splitSignature } from "ethers/lib/utils";
 import { StringDecoder } from "string_decoder";
+import { StringifyOptions } from "querystring";
 
 const Stake: NextPage = () => {
   const address = useAddress();
@@ -53,6 +54,9 @@ const Stake: NextPage = () => {
   }, [address, contract]);
 
   async function stakeNft(id: String) {
+    const data = id 
+    const dataid = [id]
+    
     if (!address) return;
 
     const isApproved = await nftDropContract?.isApproved(
@@ -62,7 +66,7 @@ const Stake: NextPage = () => {
     if (!isApproved) {
       await nftDropContract?.setApprovalForAll(stakingContractAddress, true);
     }
-    await contract?.call("stake", [[id]]);
+    await contract?.call("stake", [dataid]);
   }
 
   if (isLoading) {
