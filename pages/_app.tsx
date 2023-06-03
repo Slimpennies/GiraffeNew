@@ -7,10 +7,12 @@ const activeChain = "binance";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThirdwebProvider activeChain={activeChain}
-      autoConnect={false}>
+    <ThirdwebProvider activeChain={activeChain>
+
       <Component {...pageProps} />
+
     </ThirdwebProvider>
+
   );
 }
 
