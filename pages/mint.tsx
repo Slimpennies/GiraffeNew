@@ -15,14 +15,14 @@ const Mint: NextPage = () => {
       <h1 className={styles.h1}>Mint A Giraffe NFT!</h1>
 
       <p className={styles.explain}>
-        Mint a Generated Giraffe NFT for 0.025 BNB on the Binance Smart Chain.
+        Mint a Generated Giraffe NFT for 0.0125 BNB on the Binance Smart Chain.
       </p>
       <hr className={`${styles.smallDivider} ${styles.detailPageHr}`} />
 
       <Web3Button
         theme="dark"
         contractAddress={nftDropContractAddress}
-        action={(contract) => contract.call("mint", [address, 1], {value: ethers.utils.parseEther("0.025")})}
+        action={(contract) => contract.call("mint", [address, 1], {value: ethers.utils.parseEther("0.0125")})}
         overrides={{
           accessList: [], // The AccessList to include; only available for EIP-2930 and EIP-1559 transactions.
           blockTag: "latest", // A BlockTag specifies a specific block location in the Blockchain.
