@@ -12,17 +12,23 @@ exports.modules = {
 Object.defineProperty(exports, "__esModule", ({
     value: true
 }));
-exports["default"] = void 0;
-var _interop_require_default = (__webpack_require__(648)/* ["default"] */ .Z);
-var _react = _interop_require_default(__webpack_require__(689));
-var _head = _interop_require_default(__webpack_require__(636));
+Object.defineProperty(exports, "default", ({
+    enumerable: true,
+    get: function() {
+        return Error;
+    }
+}));
+const _interop_require_default = __webpack_require__(167);
+const _react = /*#__PURE__*/ _interop_require_default._(__webpack_require__(689));
+const _head = /*#__PURE__*/ _interop_require_default._(__webpack_require__(636));
 const statusCodes = {
     400: "Bad Request",
     404: "This page could not be found",
     405: "Method Not Allowed",
     500: "Internal Server Error"
 };
-function _getInitialProps({ res , err  }) {
+function _getInitialProps(param) {
+    let { res , err  } = param;
     const statusCode = res && res.statusCode ? res.statusCode : err ? err.statusCode : 404;
     return {
         statusCode
@@ -59,14 +65,13 @@ const styles = {
         margin: 0
     }
 };
-var _Component;
-class Error extends (_Component = _react.default.Component) {
+class Error extends _react.default.Component {
     render() {
         const { statusCode , withDarkMode =true  } = this.props;
         const title = this.props.title || statusCodes[statusCode] || "An unexpected error has occurred";
         return /*#__PURE__*/ _react.default.createElement("div", {
             style: styles.error
-        }, /*#__PURE__*/ _react.default.createElement(_head.default, null, /*#__PURE__*/ _react.default.createElement("title", null, statusCode ? `${statusCode}: ${title}` : "Application error: a client-side exception has occurred")), /*#__PURE__*/ _react.default.createElement("div", null, /*#__PURE__*/ _react.default.createElement("style", {
+        }, /*#__PURE__*/ _react.default.createElement(_head.default, null, /*#__PURE__*/ _react.default.createElement("title", null, statusCode ? statusCode + ": " + title : "Application error: a client-side exception has occurred")), /*#__PURE__*/ _react.default.createElement("div", null, /*#__PURE__*/ _react.default.createElement("style", {
             dangerouslySetInnerHTML: {
                 /* CSS minified from
                 body { margin: 0; color: #000; background: #fff; }
@@ -84,7 +89,7 @@ class Error extends (_Component = _react.default.Component) {
                 }`
                     : ''
                 }
-               */ __html: `body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}${withDarkMode ? "@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}" : ""}`
+               */ __html: "body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}" + (withDarkMode ? "@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}" : "")
             }
         }), statusCode ? /*#__PURE__*/ _react.default.createElement("h1", {
             className: "next-error-h1",
@@ -96,10 +101,15 @@ class Error extends (_Component = _react.default.Component) {
         }, this.props.title || statusCode ? title : /*#__PURE__*/ _react.default.createElement(_react.default.Fragment, null, "Application error: a client-side exception has occurred (see the browser console for more information)"), "."))));
     }
 }
-Error.displayName = "ErrorPage";
-Error.getInitialProps = _getInitialProps;
-Error.origGetInitialProps = _getInitialProps;
-exports["default"] = Error;
+(()=>{
+    Error.displayName = "ErrorPage";
+})();
+(()=>{
+    Error.getInitialProps = _getInitialProps;
+})();
+(()=>{
+    Error.origGetInitialProps = _getInitialProps;
+})();
 if ((typeof exports.default === "function" || typeof exports.default === "object" && exports.default !== null) && typeof exports.default.__esModule === "undefined") {
     Object.defineProperty(exports.default, "__esModule", {
         value: true

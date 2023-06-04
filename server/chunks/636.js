@@ -3,141 +3,38 @@ exports.id = 636;
 exports.ids = [636];
 exports.modules = {
 
-/***/ 495:
-/***/ ((__unused_webpack_module, exports) => {
-
-var __webpack_unused_export__;
-
-__webpack_unused_export__ = ({
-    value: true
-});
-Object.defineProperty(exports, "Z", ({
-    enumerable: true,
-    get: function() {
-        return _extends;
-    }
-}));
-function extends_() {
-    extends_ = Object.assign || function(target) {
-        for(var i = 1; i < arguments.length; i++){
-            var source = arguments[i];
-            for(var key in source){
-                if (Object.prototype.hasOwnProperty.call(source, key)) {
-                    target[key] = source[key];
-                }
-            }
-        }
-        return target;
-    };
-    return extends_.apply(this, arguments);
-}
-function _extends() {
-    return extends_.apply(this, arguments);
-}
-
-
-/***/ }),
-
-/***/ 648:
-/***/ ((__unused_webpack_module, exports) => {
-
-var __webpack_unused_export__;
-
-__webpack_unused_export__ = ({
-    value: true
-});
-Object.defineProperty(exports, "Z", ({
-    enumerable: true,
-    get: function() {
-        return _interopRequireDefault;
-    }
-}));
-function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : {
-        default: obj
-    };
-}
-
-
-/***/ }),
-
-/***/ 598:
-/***/ ((__unused_webpack_module, exports) => {
-
-var __webpack_unused_export__;
-
-__webpack_unused_export__ = ({
-    value: true
-});
-Object.defineProperty(exports, "Z", ({
-    enumerable: true,
-    get: function() {
-        return _interopRequireWildcard;
-    }
-}));
-function _getRequireWildcardCache(nodeInterop) {
-    if (typeof WeakMap !== "function") return null;
-    var cacheBabelInterop = new WeakMap();
-    var cacheNodeInterop = new WeakMap();
-    return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) {
-        return nodeInterop ? cacheNodeInterop : cacheBabelInterop;
-    })(nodeInterop);
-}
-function _interopRequireWildcard(obj, nodeInterop) {
-    if (!nodeInterop && obj && obj.__esModule) {
-        return obj;
-    }
-    if (obj === null || typeof obj !== "object" && typeof obj !== "function") {
-        return {
-            default: obj
-        };
-    }
-    var cache = _getRequireWildcardCache(nodeInterop);
-    if (cache && cache.has(obj)) {
-        return cache.get(obj);
-    }
-    var newObj = {};
-    var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
-    for(var key in obj){
-        if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) {
-            var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
-            if (desc && (desc.get || desc.set)) {
-                Object.defineProperty(newObj, key, desc);
-            } else {
-                newObj[key] = obj[key];
-            }
-        }
-    }
-    newObj.default = obj;
-    if (cache) {
-        cache.set(obj, newObj);
-    }
-    return newObj;
-}
-
-
-/***/ }),
-
 /***/ 636:
 /***/ ((module, exports, __webpack_require__) => {
 
-
-"use client";
+/* __next_internal_client_entry_do_not_use__  cjs */ 
 Object.defineProperty(exports, "__esModule", ({
     value: true
 }));
-exports.defaultHead = defaultHead;
-exports["default"] = void 0;
-var _extends = (__webpack_require__(495)/* ["default"] */ .Z);
-var _interop_require_default = (__webpack_require__(648)/* ["default"] */ .Z);
-var _interop_require_wildcard = (__webpack_require__(598)/* ["default"] */ .Z);
-var _react = _interop_require_wildcard(__webpack_require__(689));
-var _sideEffect = _interop_require_default(__webpack_require__(470));
-var _ampContext = __webpack_require__(918);
-var _headManagerContext = __webpack_require__(796);
-var _ampMode = __webpack_require__(732);
-var _warnOnce = __webpack_require__(618);
-function defaultHead(inAmpMode = false) {
+0 && (0);
+function _export(target, all) {
+    for(var name in all)Object.defineProperty(target, name, {
+        enumerable: true,
+        get: all[name]
+    });
+}
+_export(exports, {
+    defaultHead: function() {
+        return defaultHead;
+    },
+    default: function() {
+        return _default;
+    }
+});
+const _interop_require_default = __webpack_require__(167);
+const _interop_require_wildcard = __webpack_require__(760);
+const _react = /*#__PURE__*/ _interop_require_wildcard._(__webpack_require__(689));
+const _sideeffect = /*#__PURE__*/ _interop_require_default._(__webpack_require__(470));
+const _ampcontext = __webpack_require__(918);
+const _headmanagercontext = __webpack_require__(796);
+const _ampmode = __webpack_require__(732);
+const _warnonce = __webpack_require__(618);
+function defaultHead(inAmpMode) {
+    if (inAmpMode === void 0) inAmpMode = false;
     const head = [
         /*#__PURE__*/ _react.default.createElement("meta", {
             charSet: "utf-8"
@@ -243,7 +140,9 @@ const METATYPES = [
                 "https://fonts.googleapis.com/css",
                 "https://use.typekit.net/"
             ].some((url)=>c.props["href"].startsWith(url))) {
-                const newProps = _extends({}, c.props || {});
+                const newProps = {
+                    ...c.props || {}
+                };
                 newProps["data-href"] = newProps["href"];
                 newProps["href"] = undefined;
                 // Add this attribute to make it easy to identify optimized tags
@@ -260,17 +159,17 @@ const METATYPES = [
 /**
  * This component injects elements to `<head>` of your page.
  * To avoid duplicated `tags` in `<head>` you can use the `key` property, which will make sure every tag is only rendered once.
- */ function Head({ children  }) {
-    const ampState = (0, _react).useContext(_ampContext.AmpStateContext);
-    const headManager = (0, _react).useContext(_headManagerContext.HeadManagerContext);
-    return /*#__PURE__*/ _react.default.createElement(_sideEffect.default, {
+ */ function Head(param) {
+    let { children  } = param;
+    const ampState = (0, _react.useContext)(_ampcontext.AmpStateContext);
+    const headManager = (0, _react.useContext)(_headmanagercontext.HeadManagerContext);
+    return /*#__PURE__*/ _react.default.createElement(_sideeffect.default, {
         reduceComponentsToState: reduceComponents,
         headManager: headManager,
-        inAmpMode: (0, _ampMode).isInAmpMode(ampState)
+        inAmpMode: (0, _ampmode.isInAmpMode)(ampState)
     }, children);
 }
-var _default = Head;
-exports["default"] = _default;
+const _default = Head;
 if ((typeof exports.default === "function" || typeof exports.default === "object" && exports.default !== null) && typeof exports.default.__esModule === "undefined") {
     Object.defineProperty(exports.default, "__esModule", {
         value: true
@@ -278,6 +177,64 @@ if ((typeof exports.default === "function" || typeof exports.default === "object
     Object.assign(exports.default, exports);
     module.exports = exports.default;
 } //# sourceMappingURL=head.js.map
+
+
+/***/ }),
+
+/***/ 167:
+/***/ ((__unused_webpack_module, exports) => {
+
+
+
+exports._ = exports._interop_require_default = _interop_require_default;
+function _interop_require_default(obj) {
+    return obj && obj.__esModule ? obj : { default: obj };
+}
+
+
+/***/ }),
+
+/***/ 760:
+/***/ ((__unused_webpack_module, exports) => {
+
+
+
+function _getRequireWildcardCache(nodeInterop) {
+    if (typeof WeakMap !== "function") return null;
+
+    var cacheBabelInterop = new WeakMap();
+    var cacheNodeInterop = new WeakMap();
+
+    return (_getRequireWildcardCache = function(nodeInterop) {
+        return nodeInterop ? cacheNodeInterop : cacheBabelInterop;
+    })(nodeInterop);
+}
+exports._ = exports._interop_require_wildcard = _interop_require_wildcard;
+function _interop_require_wildcard(obj, nodeInterop) {
+    if (!nodeInterop && obj && obj.__esModule) return obj;
+    if (obj === null || typeof obj !== "object" && typeof obj !== "function") return { default: obj };
+
+    var cache = _getRequireWildcardCache(nodeInterop);
+
+    if (cache && cache.has(obj)) return cache.get(obj);
+
+    var newObj = {};
+    var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
+
+    for (var key in obj) {
+        if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) {
+            var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
+            if (desc && (desc.get || desc.set)) Object.defineProperty(newObj, key, desc);
+            else newObj[key] = obj[key];
+        }
+    }
+
+    newObj.default = obj;
+
+    if (cache) cache.set(obj, newObj);
+
+    return newObj;
+}
 
 
 /***/ })
