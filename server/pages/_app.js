@@ -27,7 +27,7 @@ var globals = __webpack_require__(764);
 
 
 // This is the chain your dApp will work on.
-const activeChain = "binance";
+const activeChain = "ethereum";
 function MyApp({ Component , pageProps  }) {
     return /*#__PURE__*/ jsx_runtime.jsx(react_.ThirdwebProvider, {
         activeChain: activeChain,
