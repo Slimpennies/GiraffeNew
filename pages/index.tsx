@@ -20,7 +20,7 @@ const Home: NextPage = () => {
           <Image src="/icons/drop.webp" alt="drop" width={64} height={64} />
           <h2 className={styles.selectBoxTitle}>Mint a new Giraffe NFT</h2>
           <p className={styles.selectBoxDescription}>
-            Mint a 1 of a kind Giraffe NFT on the Binance Smart Chain.
+            Mint a Giraffe NFT on the Ethereum Network.
           </p>
         </div>
 
