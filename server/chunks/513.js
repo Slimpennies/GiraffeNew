@@ -41,9 +41,9 @@ module.exports = {
 /* harmony export */   "UA": () => (/* binding */ nftDropContractAddress),
 /* harmony export */   "wL": () => (/* binding */ tokenContractAddress)
 /* harmony export */ });
-const nftDropContractAddress = "0x4aa00C07748feC0d78b0cA0c7918eB64B2251187";
-const tokenContractAddress = "0x8D3B5877233124793c018eb1D8A5734d897f103B";
-const stakingContractAddress = "0x460bA12ad5F29cD4cd641B65436029262Aa5aAb8";
+const nftDropContractAddress = "0x62a3aCfc280751c4AA9478911c876F89Fb967839";
+const tokenContractAddress = "0x6E3D7599B39AB878E9a239e562996388E2ad0a6C";
+const stakingContractAddress = "0xB00D74D1da3C79A59A72D16bE0FE5f7445E031Fa";
 
 
 /***/ })
