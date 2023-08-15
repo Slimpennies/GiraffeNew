@@ -22,7 +22,7 @@ const Mint: NextPage = () => {
       <Web3Button
         theme="dark"
         contractAddress={nftDropContractAddress}
-        action={(contract) => contract.call("mint", [address, 1], {value: ethers.utils.parseEther("0.0125")})}
+        action={(contract) => contract.call("mint", [address, 1], {value: ethers.utils.parseEther("0.00625")})}
         overrides={{
           accessList: [], // The AccessList to include; only available for EIP-2930 and EIP-1559 transactions.
           blockTag: "latest", // A BlockTag specifies a specific block location in the Blockchain.
